@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Blog - {Title}</title>
+    <link href='http://t1anj1ang.com/assets/css.screen.css' rel='stylesheet' />
+    <meta charset='utf-8' />
+    <meta content='width=device-width,initial-scale=1.0,shrink-to-fit=no' name='viewport' />
+    <link href='http://t1anj1ang.com/assets/css/screen.css' rel='stylesheet' />
+  </head>
+  <body>
+    <nav>
+      <a class='logo' href='http://t1anj1ang.com/index.html'>
+        <img class='name' src='http://t1anj1ang.com/assets/img/logo.svg' />
+      </a>
+      <label class='show-menu' for='show-menu'>
+        <img src='http://t1anj1ang.com/assets/icon/menu.svg' />
+      </label>
+      <input id='show-menu' role='button' type='checkbox' />
+        <ul id='menu'>
+          <li>
+            <a class='current' href='http://eidolonsky.tumblr.com'>Blog</a>
+          </li>
+          <li>
+            <a href='http://t1anj1ang.com/contact/index.html'>Contact</a>
+          </li>
+          <li>
+            <a href='/ask'>Ask</a>
+          </li>
+          <li>
+            <a href='/archive'>Archive</a>
+          </li>
+        </ul>
+    </nav>
+    <div id='blog'>
+      <header id='header'>
+        <h1>
+          <a href='{BlogURL}'>Blog of {title}</a>
+        </h1>
+        <h2>
+          {Description}
+        </h2>
+      </header>
+      <div id='blogpost'>
+        {block:Posts}
+        {block:Text}
+        <article class='blogpost'>
+          <header>
+            <h1 class='postdate'>
+              {block:Date}
+              <a href='{Permalink}'>{Month} {DayOfMonth} {Year}</a>
+              {/block:Date}
+            </h1>
+            {block:Title}
+            <h2 class='posth2'>
+              <a href='{Permalink}'>{Title}</a>
+            </h2>
+            {/block:Title}
+          </header>
+          <div class='main'>
+            {Body}
+            {block:More}
+            <p class='more'>
+              <a href='{Permalink}'>More...</a>
+            </p>
+            {/block:More}
+          </div>
+        </article>
+        {/block:Text}
+        {block:Photo}
+        <article class='blogpost'>
+          <header>
+            <h1 class='postdate'>
+              {block:Date}
+              <a href='{Permalink}'>{Month} {DayOfMonth} {Year}</a>
+              {/block:Date}
+            </h1>
+          </header>
+          <div class='image'>
+            <a href='{Permalink}'>
+              <img alt='{PhotoAlt}' src='{PhotoURL-HighRes}' title='{PhotoAlt}' />
+            </a>
+          </div>
+          <div class='blogcaption'>
+            {Caption}
+          </div>
+        </article>
+        {/block:Photo}
+        {/block:Posts}
+      </div>
+    </div>
+  </body>
+</html>

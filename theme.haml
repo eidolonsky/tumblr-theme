@@ -1,0 +1,63 @@
+%html
+  %head
+    %title Blog - {Title}
+    %link{:href => "http://t1anj1ang.com/assets/css.screen.css", :rel => "stylesheet"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width,initial-scale=1.0,shrink-to-fit=no", :name => "viewport"}
+    %link{:href => "http://t1anj1ang.com/assets/css/screen.css", :rel => "stylesheet"}
+  %body
+    %nav
+      %a.logo{:href => "http://t1anj1ang.com/index.html"}
+        %img.name{:src => "http://t1anj1ang.com/assets/img/logo.svg"}
+      %label.show-menu{:for => "show-menu"}
+        %img{:src => "http://t1anj1ang.com/assets/icon/menu.svg"}
+      %input#show-menu{:role => "button", :type => "checkbox"}
+        %ul#menu
+          %li
+            %a.current{:href => "http://eidolonsky.tumblr.com"} Blog
+          %li
+            %a{:href => "http://t1anj1ang.com/contact/index.html"} Contact
+          %li
+            %a{:href => "/ask"} Ask
+          %li
+            %a{:href => "/archive"} Archive
+    #blog
+      %header#header
+        %h1
+          %a{:href => "{BlogURL}"} Blog of {title}
+        %h2
+          {Description}
+      #blogpost
+        {block:Posts}
+        {block:Text}
+        %article.blogpost
+          %header
+            %h1.postdate
+              {block:Date}
+              %a{:href => "{Permalink}"} {Month} {DayOfMonth} {Year}
+              {/block:Date}
+            {block:Title}
+            %h2.posth2
+              %a{:href => "{Permalink}"} {Title}
+            {/block:Title}
+          .main
+            {Body}
+            {block:More}
+            %p.more
+              %a{:href => "{Permalink}"} More...
+            {/block:More}
+        {/block:Text}
+        {block:Photo}
+        %article.blogpost
+          %header
+            %h1.postdate
+              {block:Date}
+              %a{:href => "{Permalink}"} {Month} {DayOfMonth} {Year}
+              {/block:Date}
+          .image
+            %a{:href => "{Permalink}"}
+              %img{:alt => "{PhotoAlt}", :src => "{PhotoURL-HighRes}", :title => "{PhotoAlt}"}
+          .blogcaption
+            {Caption}
+        {/block:Photo}
+        {/block:Posts}
