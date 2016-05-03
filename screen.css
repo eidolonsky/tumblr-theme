@@ -1,20 +1,10 @@
 /*scss colors&fonts */
-$color_1: #46494C;
-$color_2: #202C39;
-$color_3: #FFFFFF;
-$color_4: #000000;
-$color_5: #FFF;
-$color_6: #0C0C0C;
-$font-family_1: Tahoma, Verdana, Segoe, sans-serif;
-$font-family_2: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
-
-/* Base Style */  
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  /* Base Style */
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,20 +17,25 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -52,8 +47,8 @@ body {
   color: #46494C;
   background-color: #DCDCDD;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 1.2em; 
-  line-height: 1.44em; 
+  font-size: 1.2em;
+  line-height: 1.44em;
   text-size-adjust: 100%;
 }
 
@@ -65,7 +60,7 @@ p {
 h1 {
   color: #202C39;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 1.44em; 
+  font-size: 1.44em;
   line-height: 1.2em;
   text-size-adjust: 100%;
 }
@@ -73,16 +68,16 @@ h1 {
 h2 {
   color: #202C39;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 1.5em; 
-  line-height: 1.2em; 
+  font-size: 1.5em;
+  line-height: 1.2em;
   text-size-adjust: 100%;
 }
 
 h3 {
   color: #202C39;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  font-size: 1.44em; 
-  line-height: 1.728em; 
+  font-size: 1.44em;
+  line-height: 1.728em;
 }
 
 /* links in p setting */
@@ -90,14 +85,17 @@ p a:link {
   color: #202C39;
   text-decoration: none;
 }
+
 p a:visited {
   color: #202C39;
   text-decoration: none;
 }
+
 p a:hover {
   color: #46494C;
   text-decoration: none;
 }
+
 p a:active {
   color: #46494C;
   text-decoration: none;
@@ -117,84 +115,70 @@ p a:active {
     float: right;
     margin-top: 0.5em;
     margin-right: 0.5em;
-    img {
-      height: 2.333em;
-    }
   }
-  #menu {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      li {
-        a {
-          &:hover {
-            &+.hidden {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-    li {
-      display: inline-block;
-      float: left;
-      margin-right: 0.0777em;
-      a {
-        display: block;
-        min-width: 5em;
-        height: 3.333em;
-        text-align: center;
-        line-height: 3.333em;
-        font-family: $font-family_2;
-        color: $color_3;
-        background: #111111;
-        text-decoration: none;
-      }
-      &:hover {
-        a {
-          background: #FFFFFF;
-          color: $color_4;
-        }
-      }
-      ul {
-        display: none;
-        li {
-          display: block;
-          float: none;
-          a {
-            width: auto;
-            min-width: 6.333em;
-            padding: 0 0333em;
-          }
-        }
-      }
-    }
-    .current {
-      background-color: #727D71;
-    }
+  .logo img {
+    height: 2.333em;
   }
-  .hidden {
-    &:hover {
-      display: block;
-    }
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  #menu ul li a:hover + .hidden {
+    display: block;
+  }
+  #menu li {
+    display: inline-block;
+    float: left;
+    margin-right: 0.0777em;
+  }
+  #menu li a {
+    display: block;
+    min-width: 5em;
+    height: 3.333em;
+    text-align: center;
+    line-height: 3.333em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    background: #111111;
+    text-decoration: none;
+  }
+  #menu li:hover a {
+    background: #FFFFFF;
+    color: #000000;
+  }
+  #menu li ul {
+    display: none;
+  }
+  #menu li ul li {
+    display: block;
+    float: none;
+  }
+  #menu li ul li a {
+    width: auto;
+    min-width: 6.333em;
+    padding: 0 0333em;
+  }
+  #menu .current {
+    background-color: #727D71;
+  }
+  .hidden:hover {
+    display: block;
   }
   .show-menu {
-    font-family: $font-family_2;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
-    color: $color_3;
+    color: #FFFFFF;
     background: #000000;
     text-align: left;
     display: none;
   }
   input[type=checkbox] {
     display: none;
-    &:checked {
-      &~#menu {
-        display: block;
-      }
-    }
+  }
+  input[type=checkbox]:checked ~ #menu {
+    display: block;
   }
   /* nav end */
   /* home start */
@@ -244,11 +228,11 @@ p a:active {
     overflow: hidden;
     padding-right: 1.333em;
     padding-left: 1.333em;
-    img {
-      position: absolute;
-      height: 100%;
-      width: auto;
-    }
+  }
+  .thumb img {
+    position: absolute;
+    height: 100%;
+    width: auto;
   }
   .img2 {
     width: 30%;
@@ -298,63 +282,61 @@ p a:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    img {
-      width: auto;
-      height: 8em;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        transform: scale(0.95);
-      }
-    }
-    li {
-      &:target {
-        position: relative;
-        transform-origin: top;
-        z-index: 2;
-        transition: all 0.5s ease-in-out;
-        img {
-          width: 100%;
-          height: auto;
-          margin-left: auto;
-          margin-right: auto;
-          &:hover {
-            transform: scale(1);
-          }
-        }
-        a {
-          color: $color_5;
-          min-width: 1em;
-          width: 2em;
-          height: 2em;
-          font-size: 0.5em;
-          text-decoration: none;
-          background-color: #000;
-          text-align: center;
-          line-height: 2em;
-          z-index: 4;
-          &:visited {
-            text-decoration: none;
-          }
-        }
-        .close {
-          display: inline;
-          left: 0;
-        }
-      }
-    }
-    .close {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  }
+  .works img {
+    width: auto;
+    height: 8em;
+    transition: all 0.5s ease-in-out;
+  }
+  .works img:hover {
+    transform: scale(0.95);
+  }
+  .works li:target {
+    position: relative;
+    transform-origin: top;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+  .works li:target img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .works li:target img:hover {
+    transform: scale(1);
+  }
+  .works li:target a {
+    color: #FFF;
+    min-width: 1em;
+    width: 2em;
+    height: 2em;
+    font-size: 0.5em;
+    text-decoration: none;
+    background-color: #000;
+    text-align: center;
+    line-height: 2em;
+    z-index: 4;
+  }
+  .works li:target a:visited {
+    text-decoration: none;
+  }
+  .works li:target .close {
+    display: inline;
+    left: 0;
+  }
+  .works .close {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .wimg {
     height: 8em;
     width: auto;
   }
   /* portfolio end */
-  /* Contact start */  
+  /* Contact start */
   .portrait {
     width: 13.333em;
     height: 13.333em;
@@ -364,47 +346,45 @@ p a:active {
     margin-top: 2.777em;
     margin-left: auto;
     margin-right: auto;
-    img {
-      width: 15.333em;
-      height: 15.333em;
-    }
+  }
+  .portrait img {
+    width: 15.333em;
+    height: 15.333em;
   }
   .message {
     text-align: center;
     margin-top: 2.777em;
     padding-bottom: 2.333em;
-    a {
-      &:link {
-        color: $color_2;
-        text-decoration: underline;
-      }
-      &:visited {
-        color: $color_2;
-        text-decoration: none;
-      }
-      &:hover {
-        color: $color_1;
-        text-decoration: none;
-      }
-      &:active {
-        color: $color_1;
-        text-decoration: none;
-      }
-    }
+  }
+  .message a:link {
+    color: #202C39;
+    text-decoration: underline;
+  }
+  .message a:visited {
+    color: #202C39;
+    text-decoration: none;
+  }
+  .message a:hover {
+    color: #46494C;
+    text-decoration: none;
+  }
+  .message a:active {
+    color: #46494C;
+    text-decoration: none;
   }
   .icon {
     display: flex;
     justify-content: center;
-    img {
-      width: 2em;
-      height: 2em;
-      padding-right: 0.666em;
-      transition: all 0.3s ease;
-      &:hover {
-        width: 2.5em;
-        height: 2.5em;
-      }
-    }
+  }
+  .icon img {
+    width: 2em;
+    height: 2em;
+    padding-right: 0.666em;
+    transition: all 0.3s ease;
+  }
+  .icon img:hover {
+    width: 2.5em;
+    height: 2.5em;
   }
   /* Contact end */
   /* Blog start */
@@ -413,42 +393,40 @@ p a:active {
     width: 100%;
     table-layout: fixed;
     padding-top: 2.333em;
-    a {
-      &:link {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:visited {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:hover {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:active {
-        color: $color_6;
-        text-decoration: none;
-      }
-    }
-    img {
-      display: block;
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  }
+  #blog a:link {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:visited {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:hover {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:active {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog img {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #header {
     display: table-cell;
     width: 30%;
     text-align: right;
     padding: 2.333em;
-    h1 {
-      padding-bottom: 2.333em;
-    }
-    h2 {
-      font-size: 1em;
-    }
+  }
+  #header h1 {
+    padding-bottom: 2.333em;
+  }
+  #header h2 {
+    font-size: 1em;
   }
   #blogpost {
     display: table-cell;
@@ -478,6 +456,7 @@ p a:active {
   }
   /* Blog end */
 }
+
 @media screen and (max-width: 35em) {
   /* nav start */
   nav {
@@ -492,9 +471,9 @@ p a:active {
     margin-right: 1.5em;
     float: right;
     width: 2.777em;
-    img {
-      height: 2.333em;
-    }
+  }
+  .logo img {
+    height: 2.333em;
   }
   .current {
     background-color: #727D71;
@@ -506,66 +485,62 @@ p a:active {
     margin: 0;
     padding: 0;
     z-index: 1000;
-    li {
-      width: 75%;
-    }
+  }
+  ul li {
+    width: 75%;
   }
   li {
     display: inline-block;
     float: left;
     margin-right: 0.0777em;
     margin-bottom: 0.0777em;
-    a {
-      display: block;
-      text-align: center;
-      line-height: 2.777em;
-      font-family: $font-family_2;
-      color: $color_3;
-      background: #000000;
-      text-decoration: none;
-      width: 75%;
-    }
-    &:hover {
-      a {
-        background: #FFFFFF;
-        color: $color_4;
-        z-index: 1000;
-      }
-    }
+  }
+  li a {
+    display: block;
+    text-align: center;
+    line-height: 2.777em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    background: #000000;
+    text-decoration: none;
+    width: 75%;
+  }
+  li:hover a {
+    background: #FFFFFF;
+    color: #000000;
+    z-index: 1000;
   }
   .show-menu {
     display: block;
     height: 3.333em;
     width: 3.333em;
-    font-family: $font-family_2;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
-    color: $color_3;
+    color: #FFFFFF;
     background: #000000;
     text-align: left;
-    img {
-      width: 3.333em;
-      height: 3.333em;
-      float: left;
-    }
+  }
+  .show-menu img {
+    width: 3.333em;
+    height: 3.333em;
+    float: left;
   }
   #meun {
     z-index: 1000;
-    li {
-      z-index: 1000;
-    }
+  }
+  #meun li {
+    z-index: 1000;
   }
   input[type=checkbox] {
     display: none;
     z-index: 1000;
-    &:checked {
-      &~#menu {
-        display: block;
-        z-index: 1000;
-      }
-    }
+  }
+  input[type=checkbox]:checked ~ #menu {
+    display: block;
+    z-index: 1000;
   }
   /* nav end */
-  /* home start */  
+  /* home start */
   .bgi {
     z-index: -3;
     max-width: 100%;
@@ -629,11 +604,11 @@ p a:active {
     overflow: hidden;
     padding-right: 0.333em;
     padding-left: 0.333em;
-    img {
-      position: absolute;
-      height: 100%;
-      width: auto;
-    }
+  }
+  .thumb img {
+    position: absolute;
+    height: 100%;
+    width: auto;
   }
   .head1 {
     text-align: left;
@@ -654,71 +629,63 @@ p a:active {
     padding-left: 0.333em;
   }
   /* about end */
-  /* portfolio start */  
+  /* portfolio start */
   .works {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
-    img {
-      width: auto;
-      height: 5.6em;
-    }
-    li {
-      &:target {
-        z-index: 2;
-        img {
-          height: auto;
-          width: 100%;
-          position: absolute;
-          left: 0;
-        }
-        a {
-          color: $color_4;
-          min-width: 1em;
-          width: 2em;
-          height: 2em;
-          font-size: 0.5em;
-          text-decoration: none;
-          background-color: #DCDCDD;
-          text-align: center;
-          line-height: 2em;
-          z-index: 4;
-          width: 100em;
-          height: 100em;
-          &:visited {
-            text-decoration: none;
-          }
-        }
-        .close {
-          display: inline;
-          z-index: 100;
-          left: 0;
-        }
-      }
-    }
-    .close {
-      display: none;
-      left: 0;
-    }
+  }
+  .works img {
+    width: auto;
+    height: 5.6em;
+  }
+  .works li:target {
+    z-index: 2;
+  }
+  .works li:target img {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .works li:target a {
+    color: #000000;
+    min-width: 1em;
+    width: 2em;
+    height: 2em;
+    font-size: 0.5em;
+    text-decoration: none;
+    background-color: #DCDCDD;
+    text-align: center;
+    line-height: 2em;
+    z-index: 4;
+    width: 100em;
+    height: 100em;
+  }
+  .works li:target a:visited {
+    text-decoration: none;
+  }
+  .works li:target .close {
+    display: inline;
+    z-index: 100;
+    left: 0;
+  }
+  .works .close {
+    display: none;
+    left: 0;
   }
   .wimg {
     height: 5.6em;
     width: auto;
   }
-  .work {
-    li {
-      &:target {
-        .wimg {
-          position: absolute;
-          left: 0;
-        }
-      }
-    }
+  .work li:target .wimg {
+    position: absolute;
+    left: 0;
   }
   /* portfolio end */
-  /* Contact start */  
+  /* Contact start */
   .portrait {
     width: 10.333em;
     height: 10.333em;
@@ -728,82 +695,76 @@ p a:active {
     margin-top: 1.777em;
     margin-left: auto;
     margin-right: auto;
-    img {
-      width: 10.333em;
-      height: 10.333em;
-    }
+  }
+  .portrait img {
+    width: 10.333em;
+    height: 10.333em;
   }
   .message {
     text-align: center;
     margin-top: 1.777em;
     padding-bottom: 2.333em;
-    a {
-      &:link {
-        color: $color_2;
-        text-decoration: underline;
-      }
-      &:visited {
-        color: $color_2;
-        text-decoration: none;
-      }
-      &:hover {
-        color: $color_1;
-        text-decoration: none;
-      }
-      &:active {
-        color: $color_1;
-        text-decoration: none;
-      }
-    }
+  }
+  .message a:link {
+    color: #202C39;
+    text-decoration: underline;
+  }
+  .message a:visited {
+    color: #202C39;
+    text-decoration: none;
+  }
+  .message a:hover {
+    color: #46494C;
+    text-decoration: none;
+  }
+  .message a:active {
+    color: #46494C;
+    text-decoration: none;
   }
   .icon {
     display: flex;
     justify-content: center;
-    img {
-      width: 2em;
-      height: 2em;
-      margin-right: 0.333em;
-    }
+  }
+  .icon img {
+    width: 2em;
+    height: 2em;
+    margin-right: 0.333em;
   }
   /* Contact end */
-  /* Blog start */  
+  /* Blog start */
   #blog {
     padding-top: 2.333em;
     padding-left: 0.333em;
     padding-right: 0.333em;
     overflow: hidden;
-    a {
-      &:link {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:visited {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:hover {
-        color: $color_6;
-        text-decoration: none;
-      }
-      &:active {
-        color: $color_6;
-        text-decoration: none;
-      }
-    }
-    img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
   }
-  #header {
-    h1 {
-      padding-bottom: 2.333em;
-    }
-    h2 {
-      line-height: 1.333em;
-      font-size: 1em;
-    }
+  #blog a:link {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:visited {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:hover {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog a:active {
+    color: #0C0C0C;
+    text-decoration: none;
+  }
+  #blog img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  #header h1 {
+    padding-bottom: 2.333em;
+  }
+  #header h2 {
+    line-height: 1.333em;
+    font-size: 1em;
   }
   .posth2 {
     padding-bottom: 1em;
@@ -821,5 +782,5 @@ p a:active {
   .blogpost {
     padding-bottom: 1.333em;
   }
-  /* Blog end */  
+  /* Blog end */
 }
