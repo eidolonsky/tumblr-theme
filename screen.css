@@ -20,6 +20,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1;
+  position: relative;
 }
 
 ol, ul {
@@ -50,8 +51,8 @@ body {
   font-size: 1.2em;
   line-height: 1.44em;
   text-size-adjust: 100%;
+  height: 100%;
 }
-
 p {
   line-height: 1.2em;
   padding-bottom: 1.44em;
@@ -103,83 +104,30 @@ p a:active {
 
 @media screen and (min-width: 35em) {
   /* nav start */
-  nav {
-    background-color: black;
-    width: 100%;
-    height: 3.333em;
-    border-bottom: white solid;
-    z-index: 1;
-    padding-top: 1em;
-  }
-  .logo {
-    float: right;
-    margin-top: 0.5em;
-    margin-right: 0.5em;
-  }
-  .logo img {
-    height: 2.333em;
-  }
-  #menu ul {
+  ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position: absolute;
+    overflow: hidden;
+    background-color: #000000;
   }
-  #menu ul li a:hover + .hidden {
-    display: block;
-  }
-  #menu li {
-    display: inline-block;
+  ul.topnav li {
     float: left;
-    margin-right: 0.0777em;
   }
-  #menu li a {
-    display: block;
-    min-width: 5em;
-    height: 3.333em;
-    text-align: center;
-    line-height: 3.333em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-    background: #111111;
-    text-decoration: none;
+  ul.topnav li a {
+      display: inline-block;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
   }
-  #menu li:hover a {
-    background: #FFFFFF;
-    color: #000000;
+  .current {
+    background-color: #222222;
   }
-  #menu li ul {
-    display: none;
-  }
-  #menu li ul li {
-    display: block;
-    float: none;
-  }
-  #menu li ul li a {
-    width: auto;
-    min-width: 6.333em;
-    padding: 0 0333em;
-  }
-  #menu .current {
-    background-color: #727D71;
-  }
-  .hidden:hover {
-    display: block;
-  }
-  .show-menu {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: #FFFFFF;
-    background: #000000;
-    text-align: left;
-    display: none;
-  }
-  input[type=checkbox] {
-    display: none;
-  }
-  input[type=checkbox]:checked ~ #menu {
-    display: block;
-  }
+  ul.topnav li a:hover {background-color: #555;}
+  ul.topnav li.icon {display: none;}
   /* nav end */
   /* home start */
   .bgi {
@@ -212,6 +160,7 @@ p a:active {
     width: 7.333em;
     margin-left: 3em;
   }
+
   /* home end */
   /* about start */
   .photos {
@@ -219,7 +168,7 @@ p a:active {
     justify-content: center;
     padding-right: 1.777em;
     padding-bottom: 1.777em;
-    padding-top: 1.777em;
+    padding-top: 3.554em;
   }
   .thumb {
     position: relative;
@@ -257,83 +206,68 @@ p a:active {
     width: 75%;
     padding-right: 3.554em;
     padding-left: 1.777em;
+    margin-right: 6em;
   }
-  .ambitions {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-  .head2 {
-    display: table-cell;
-    text-align: right;
-    width: 25%;
-    padding-left: 1.777em;
-    padding-right: 1.777em;
-  }
-  .p2 {
-    display: table-cell;
-    width: 75%;
-    padding-right: 3.554em;
-    padding-left: 1.777em;
+  .p1 p {
+    max-width: 40em;
   }
   /* about end */
   /* portfolio start */
-  .works {
+  .myworks {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 7.108em;
+    padding-bottom: 3em;
   }
-  .works img {
-    width: auto;
-    height: 8em;
-    transition: all 0.5s ease-in-out;
+  .myworks a img{
+    width: 12em;
+    height: 12em;
   }
-  .works img:hover {
-    transform: scale(0.95);
+  .phoweb {
+    padding-left: 10em;
   }
-  .works li:target {
-    position: relative;
-    transform-origin: top;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
+  .dataweb {
+    padding-right: 10em;
   }
-  .works li:target img {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+  .dv_bird {
+    padding-left: 10em;
   }
-  .works li:target img:hover {
-    transform: scale(1);
+  .dv_gun {
+    padding-right: 10em;
   }
-  .works li:target a {
-    color: #FFF;
-    min-width: 1em;
-    width: 2em;
-    height: 2em;
-    font-size: 0.5em;
-    text-decoration: none;
-    background-color: #000;
+  figure figcaption {
+    padding-top: 1.777em;
     text-align: center;
-    line-height: 2em;
-    z-index: 4;
   }
-  .works li:target a:visited {
+  .myworks a:link {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    text-decoration: none;
     text-decoration: none;
   }
-  .works li:target .close {
-    display: inline;
-    left: 0;
+  .myworks a:visited {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
+    text-decoration: none;
   }
-  .works .close {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .myworks a:hover {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
+    text-decoration: none;
   }
-  .wimg {
-    height: 8em;
-    width: auto;
+  .myworks a:active {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
+    text-decoration: none;
+  }
+  
+
+  .vizimg {
+    width: 100%;
+    height: 100%;   
+  }
+  .vizimg img {
+    width: 100%;
+    height: 100%;
   }
   /* portfolio end */
   /* Contact start */
@@ -459,85 +393,41 @@ p a:active {
 
 @media screen and (max-width: 35em) {
   /* nav start */
-  nav {
-    background-color: black;
-    width: 100%;
-    height: 3.333em;
-    border-bottom: white solid;
-    z-index: 1000;
-  }
-  .logo {
-    margin-top: 0.5em;
-    margin-right: 1.5em;
-    float: right;
-    width: 2.777em;
-  }
-  .logo img {
-    height: 2.333em;
-  }
-  .current {
-    background-color: #727D71;
-  }
-  ul {
-    position: absolute;
-    display: none;
+  ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    z-index: 1000;
+    overflow: hidden;
+    background-color: #000000;
   }
-  ul li {
-    width: 75%;
+  ul.topnav li a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s;
+      padding: 14px 16px;
+      font-size: 17px;
   }
-  li {
+  ul.topnav li {float: left;}
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
     display: inline-block;
-    float: left;
-    margin-right: 0.0777em;
-    margin-bottom: 0.0777em;
   }
-  li a {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
     display: block;
-    text-align: center;
-    line-height: 2.777em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-    background: #000000;
-    text-decoration: none;
-    width: 75%;
-  }
-  li:hover a {
-    background: #FFFFFF;
-    color: #000000;
-    z-index: 1000;
-  }
-  .show-menu {
-    display: block;
-    height: 3.333em;
-    width: 3.333em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: #FFFFFF;
-    background: #000000;
     text-align: left;
-  }
-  .show-menu img {
-    width: 3.333em;
-    height: 3.333em;
-    float: left;
-  }
-  #meun {
-    z-index: 1000;
-  }
-  #meun li {
-    z-index: 1000;
-  }
-  input[type=checkbox] {
-    display: none;
-    z-index: 1000;
-  }
-  input[type=checkbox]:checked ~ #menu {
-    display: block;
-    z-index: 1000;
   }
   /* nav end */
   /* home start */
@@ -567,17 +457,14 @@ p a:active {
     width: 3.333em;
     margin-left: 1.333em;
   }
+
   /* home end */
   /* about start */
   h2 {
     padding-top: 0.777em;
     padding-left: 0.333em;
+    padding-bottom: 0.777em;
     line-height: 0.333em;
-  }
-  h3 {
-    padding-top: 0.666em;
-    padding-left: 0.333em;
-    line-height: 1.333em;
   }
   p {
     padding: 0.333em;
@@ -630,60 +517,49 @@ p a:active {
   }
   /* about end */
   /* portfolio start */
-  .works {
+  .myworks {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
+    justify-content: space-around;
+    padding-top: 7.108em;
   }
-  .works img {
-    width: auto;
-    height: 5.6em;
-  }
-  .works li:target {
-    z-index: 2;
-  }
-  .works li:target img {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    left: 0;
-  }
-  .works li:target a {
-    color: #000000;
-    min-width: 1em;
-    width: 2em;
-    height: 2em;
-    font-size: 0.5em;
-    text-decoration: none;
-    background-color: #DCDCDD;
+  .myworks a img{
+    width: 7em;
+    height: 7em;
+  }  
+  figure figcaption {
+    padding-top: 1.777em;
+    font-size: 80%;
     text-align: center;
-    line-height: 2em;
-    z-index: 4;
-    width: 100em;
-    height: 100em;
   }
-  .works li:target a:visited {
+  .myworks a:link {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    text-decoration: none;
+    text-decoration: none;  
+  }
+  .myworks a:visited {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
     text-decoration: none;
   }
-  .works li:target .close {
-    display: inline;
-    z-index: 100;
-    left: 0;
+  .myworks a:hover {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
+    text-decoration: none;
   }
-  .works .close {
-    display: none;
-    left: 0;
+  .myworks a:active {
+    color: #0C0C0C;
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"    
+    text-decoration: none;
+  }  
+
+  .vizimg {
+    width: 100%;
+    height: 100%;   
   }
-  .wimg {
-    height: 5.6em;
-    width: auto;
-  }
-  .work li:target .wimg {
-    position: absolute;
-    left: 0;
-  }
+  .vizimg img {
+    width: 100%;
+    height: 100%;
+  }   
   /* portfolio end */
   /* Contact start */
   .portrait {
